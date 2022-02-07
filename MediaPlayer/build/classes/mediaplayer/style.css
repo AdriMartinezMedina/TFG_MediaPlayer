@@ -1,0 +1,59 @@
+#pane {
+    -fx-background-color: black;
+}
+
+#openFile {
+    -fx-background-image: url("../images/of.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#playVideo {
+    -fx-background-image: url("../images/playpause.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#stopVideo {
+    -fx-background-image: url("../images/nogo.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#slowVideo {
+    -fx-background-image: url("../images/goback.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#fastVideo {
+    -fx-background-image: url("../images/goforward.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#normalVideo {
+    -fx-background-image: url("../images/go.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#backVideo5 {
+    -fx-background-image: url("../images/b5.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#forwardVideo5 {
+    -fx-background-image: url("../images/f5.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}

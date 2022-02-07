@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleKeyPressed" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mediaplayer.MediaPlayerController">
+    <center>
+        <StackPane fx:id="pane" prefHeight="300.0" prefWidth="609.0" BorderPane.alignment="CENTER">
+            <children>
+                <MediaView fx:id="mediaView" fitHeight="300.0" fitWidth="600.0">
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                </MediaView>
+                <VBox alignment="BOTTOM_CENTER" prefHeight="39.0" prefWidth="609.0">
+                    <children>
+                        <Slider fx:id="progressBar" prefHeight="0.0" prefWidth="600.0" />
+                        <HBox alignment="BOTTOM_CENTER" opacity="0.8" prefHeight="39.0" prefWidth="576.0">
+                            <children>
+                                <Button fx:id="openFile" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#OpenFileMethod" prefWidth="35.0">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="14.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="playVideo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#playVideo" prefWidth="35.0">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="stopVideo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#stopVideo" prefWidth="35.0">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="14.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="slowVideo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#furtherSlowDownVideo" prefWidth="35.0">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="backVideo5" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#back5" prefWidth="35.0">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                        <Button fx:id="normalVideo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#normalSpeedVideo" prefWidth="35.0">
+                           <HBox.margin>
+                              <Insets bottom="7.0" right="7.0" />
+                           </HBox.margin>
+                        </Button>
+                                <Button fx:id="forwardVideo5" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#skip5" prefWidth="35.0">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="fastVideo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#furtherSpeedUpVideo" prefWidth="35.0">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="21.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Slider fx:id="volumeSlider" stylesheets="@style.css">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" />
+                                    </HBox.margin>
+                                </Slider>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <MenuBar prefHeight="0.0" prefWidth="600.0" StackPane.alignment="TOP_CENTER">
+                    <menus>
+                        <Menu id="menuFiles" mnemonicParsing="false" text="Archivos">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Historial" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Ayuda">
+                            <items>
+                                <MenuItem fx:id="menuAcercaDe" mnemonicParsing="false" onAction="#openAcercaDe" text="Acerca De" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>
