@@ -94,12 +94,12 @@
                         <Insets left="20.0" />
                      </GridPane.margin>
                   </Text>
-                  <Hyperlink text="Hyperlink" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                  <Hyperlink prefHeight="28.0" prefWidth="316.0" text="https://github.com/AdriMartinezMedina/TFG_MediaPlayer" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                      <GridPane.margin>
                         <Insets bottom="28.0" left="250.0" />
                      </GridPane.margin>
                   </Hyperlink>
-                  <Hyperlink layoutX="20.0" layoutY="209.0" text="https://openjfx.io/" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                  <Hyperlink layoutX="20.0" layoutY="209.0" prefHeight="23.0" prefWidth="104.0" text="https://openjfx.io/" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets right="100.0" />
                      </GridPane.margin>

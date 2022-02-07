@@ -78,11 +78,6 @@
                 </VBox>
                 <MenuBar prefHeight="0.0" prefWidth="600.0" StackPane.alignment="TOP_CENTER">
                     <menus>
-                        <Menu id="menuFiles" mnemonicParsing="false" text="Archivos">
-                            <items>
-                                <MenuItem mnemonicParsing="false" text="Historial" />
-                            </items>
-                        </Menu>
                         <Menu mnemonicParsing="false" text="Ayuda">
                             <items>
                                 <MenuItem fx:id="menuAcercaDe" mnemonicParsing="false" onAction="#openAcercaDe" text="Acerca De" />
