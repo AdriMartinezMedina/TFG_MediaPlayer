@@ -30,6 +30,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Slider;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -347,6 +348,9 @@ public class MediaPlayerController implements Initializable {
 
             // Creamos la ventana acerca de
             Stage acercade = new Stage();
+            
+            // Añadimos un icono a la ventana
+            acercade.getIcons().add(new Image("images/icon.png"));
 
             /**
              * Añadimos el contenido guardado en la escena a la ventana y la
@@ -434,6 +438,9 @@ public class MediaPlayerController implements Initializable {
 
                 Scene scene = new Scene(root);
                 Stage acercade = new Stage();
+                
+                acercade.setTitle("Media Player hecho por Adrian");
+                acercade.getIcons().add(new Image("images/icon.png"));
 
                 acercade.setScene(scene);
                 acercade.show();

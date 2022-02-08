@@ -14,6 +14,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -34,6 +35,8 @@ public class MediaPlayer extends Application {
         // A la escena le añadimos los valores descriptivos que queremos
         stage.setTitle("Media Player hecho por Adrian");
         stage.setFullScreenExitHint("Presione ESC or Doble Click para salir de la pantalla completa");
+        
+        stage.getIcons().add(new Image("images/icon.png"));
 
         /**
          * Añadimos a la escena la capacidad de cambiar entre modo ventana y
