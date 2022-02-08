@@ -75,19 +75,19 @@ public class MediaPlayerController implements Initializable {
     @FXML
     private Slider progressBar;
 
+    // Botones de la aplicación
     @FXML
-    private Button openFile, playVideo, stopVideo, slowVideo, 
+    private Button openFile, playVideo, stopVideo, slowVideo,
             backVideo5, normalVideo, forwardVideo5, fastVideo, setVisibilityButtons;
-    
+
+    // Menu bar de la apliación
     @FXML
     private MenuBar menuBar;
 
+    // Booleana que usaremos para mostrar y ocultar los botones
     @FXML
     private boolean visible = true;
 
-//    FadeTransition fadeTransition = new FadeTransition(Duration.millis(200),openFile);
-//    fadeTransition.setToValue(0);
-//    fadeTransition.play();
     /**
      * Método que usamos para añadir al boton de abrir archivo la capacidad de
      * hacerlo.
@@ -366,7 +366,7 @@ public class MediaPlayerController implements Initializable {
             // Creamos la ventana acerca de
             Stage acercade = new Stage();
 
-            // Añadimos un icono a la ventana
+            // Añadimos a la ventana nuestro icono personalizado
             acercade.getIcons().add(new Image("images/icon.png"));
 
             /**
@@ -379,87 +379,113 @@ public class MediaPlayerController implements Initializable {
         }
     }
 
+    /**
+     * Método que usamos para mostrar y ocultar todos los controles con el fin
+     * de que el video sea perfectamente visible sin molestias a gusto del
+     * usuario
+     *
+     * @param event
+     */
     @FXML
     private void hideShowControls(ActionEvent event) {
 
         try {
-                FadeTransition fadeTransitionVisibility = new FadeTransition(Duration.millis(200), setVisibilityButtons);
-                FadeTransition fadeTransitionOpenFile = new FadeTransition(Duration.millis(200), openFile);
-                FadeTransition fadeTransitionPlayVideo = new FadeTransition(Duration.millis(200), playVideo);
-                FadeTransition fadeTransitionStopVideo = new FadeTransition(Duration.millis(200), stopVideo);
-                FadeTransition fadeTransitionSlowVideo = new FadeTransition(Duration.millis(200), slowVideo);
-                FadeTransition fadeTransitionBackVideo5 = new FadeTransition(Duration.millis(200), backVideo5);
-                FadeTransition fadeTransitionNormalVideo = new FadeTransition(Duration.millis(200), normalVideo);
-                FadeTransition fadeTransitionForwardVideo5 = new FadeTransition(Duration.millis(200), forwardVideo5);
-                FadeTransition fadeTransitionFastVideo = new FadeTransition(Duration.millis(200), fastVideo);
-                FadeTransition fadeTransitionVolumeSlider = new FadeTransition(Duration.millis(200), volumeSlider);
-                FadeTransition fadeTransitionProgressBar = new FadeTransition(Duration.millis(200), progressBar);
-                FadeTransition fadeTransitionMenuBar = new FadeTransition(Duration.millis(200), menuBar);
-                
-                if (visible) {
-                    fadeTransitionVisibility.setToValue(0.2);
-                    fadeTransitionOpenFile.setToValue(0);
-                    fadeTransitionPlayVideo.setToValue(0);
-                    fadeTransitionStopVideo.setToValue(0);
-                    fadeTransitionSlowVideo.setToValue(0);
-                    fadeTransitionBackVideo5.setToValue(0);
-                    fadeTransitionNormalVideo.setToValue(0);
-                    fadeTransitionForwardVideo5.setToValue(0);
-                    fadeTransitionFastVideo.setToValue(0);
-                    fadeTransitionVolumeSlider.setToValue(0);
-                    fadeTransitionProgressBar.setToValue(0);
-                    fadeTransitionMenuBar.setToValue(0);
-                    
-                    fadeTransitionVisibility.play();
-                    fadeTransitionOpenFile.play();
-                    fadeTransitionPlayVideo.play();
-                    fadeTransitionStopVideo.play();
-                    fadeTransitionSlowVideo.play();
-                    fadeTransitionBackVideo5.play();
-                    fadeTransitionNormalVideo.play();
-                    fadeTransitionForwardVideo5.play();
-                    fadeTransitionFastVideo.play();
-                    fadeTransitionVolumeSlider.play();
-                    fadeTransitionProgressBar.play();
-                    fadeTransitionMenuBar.play();
-                    
-                    fadeTransitionMenuBar.setOnFinished(e -> {
-                        visible = false;
-                    });
-                }
-                if (!visible) {
-                    fadeTransitionVisibility.setToValue(1);
-                    fadeTransitionOpenFile.setToValue(1);
-                    fadeTransitionPlayVideo.setToValue(1);
-                    fadeTransitionStopVideo.setToValue(1);
-                    fadeTransitionSlowVideo.setToValue(1);
-                    fadeTransitionBackVideo5.setToValue(1);
-                    fadeTransitionNormalVideo.setToValue(1);
-                    fadeTransitionForwardVideo5.setToValue(1);
-                    fadeTransitionFastVideo.setToValue(1);
-                    fadeTransitionVolumeSlider.setToValue(1);
-                    fadeTransitionProgressBar.setToValue(1);
-                    fadeTransitionMenuBar.setToValue(1);
-                    
-                    fadeTransitionVisibility.play();
-                    fadeTransitionOpenFile.play();
-                    fadeTransitionPlayVideo.play();
-                    fadeTransitionStopVideo.play();
-                    fadeTransitionSlowVideo.play();
-                    fadeTransitionBackVideo5.play();
-                    fadeTransitionNormalVideo.play();
-                    fadeTransitionForwardVideo5.play();
-                    fadeTransitionFastVideo.play();
-                    fadeTransitionVolumeSlider.play();
-                    fadeTransitionProgressBar.play();
-                    fadeTransitionMenuBar.play();
-                    
-                    fadeTransitionMenuBar.setOnFinished(e -> {
-                        visible = true;
-                    });
-                }
-            } catch (Exception e) {
+            /**
+             * Objetos transiciones que nos permiten hacer visibles
+             * e invisibles posteriormente a los controles de nuestra
+             * aplicación cambiando su visibilidad
+             */
+            FadeTransition fadeTransitionVisibility = new FadeTransition(Duration.millis(200), setVisibilityButtons);
+            FadeTransition fadeTransitionOpenFile = new FadeTransition(Duration.millis(200), openFile);
+            FadeTransition fadeTransitionPlayVideo = new FadeTransition(Duration.millis(200), playVideo);
+            FadeTransition fadeTransitionStopVideo = new FadeTransition(Duration.millis(200), stopVideo);
+            FadeTransition fadeTransitionSlowVideo = new FadeTransition(Duration.millis(200), slowVideo);
+            FadeTransition fadeTransitionBackVideo5 = new FadeTransition(Duration.millis(200), backVideo5);
+            FadeTransition fadeTransitionNormalVideo = new FadeTransition(Duration.millis(200), normalVideo);
+            FadeTransition fadeTransitionForwardVideo5 = new FadeTransition(Duration.millis(200), forwardVideo5);
+            FadeTransition fadeTransitionFastVideo = new FadeTransition(Duration.millis(200), fastVideo);
+            FadeTransition fadeTransitionVolumeSlider = new FadeTransition(Duration.millis(200), volumeSlider);
+            FadeTransition fadeTransitionProgressBar = new FadeTransition(Duration.millis(200), progressBar);
+            FadeTransition fadeTransitionMenuBar = new FadeTransition(Duration.millis(200), menuBar);
+
+            if (visible) {
+                // Ponemos la visibilidad de los controles a 0
+                fadeTransitionVisibility.setToValue(0.2);
+                fadeTransitionOpenFile.setToValue(0);
+                fadeTransitionPlayVideo.setToValue(0);
+                fadeTransitionStopVideo.setToValue(0);
+                fadeTransitionSlowVideo.setToValue(0);
+                fadeTransitionBackVideo5.setToValue(0);
+                fadeTransitionNormalVideo.setToValue(0);
+                fadeTransitionForwardVideo5.setToValue(0);
+                fadeTransitionFastVideo.setToValue(0);
+                fadeTransitionVolumeSlider.setToValue(0);
+                fadeTransitionProgressBar.setToValue(0);
+                fadeTransitionMenuBar.setToValue(0);
+
+                // Ejecutamos la transicion
+                fadeTransitionVisibility.play();
+                fadeTransitionOpenFile.play();
+                fadeTransitionPlayVideo.play();
+                fadeTransitionStopVideo.play();
+                fadeTransitionSlowVideo.play();
+                fadeTransitionBackVideo5.play();
+                fadeTransitionNormalVideo.play();
+                fadeTransitionForwardVideo5.play();
+                fadeTransitionFastVideo.play();
+                fadeTransitionVolumeSlider.play();
+                fadeTransitionProgressBar.play();
+                fadeTransitionMenuBar.play();
+
+                /**
+                 * al completarse la última transición cambiamos el
+                 * valor de la booleana visible para que al volver
+                 * a hacer clic se lleve a cabo el efecto contrario
+                 */
+                fadeTransitionMenuBar.setOnFinished(e -> {
+                    visible = false;
+                });
             }
+            if (!visible) {
+                // Ponemos la visibilidad de los controles a 1
+                fadeTransitionVisibility.setToValue(1);
+                fadeTransitionOpenFile.setToValue(1);
+                fadeTransitionPlayVideo.setToValue(1);
+                fadeTransitionStopVideo.setToValue(1);
+                fadeTransitionSlowVideo.setToValue(1);
+                fadeTransitionBackVideo5.setToValue(1);
+                fadeTransitionNormalVideo.setToValue(1);
+                fadeTransitionForwardVideo5.setToValue(1);
+                fadeTransitionFastVideo.setToValue(1);
+                fadeTransitionVolumeSlider.setToValue(1);
+                fadeTransitionProgressBar.setToValue(1);
+                fadeTransitionMenuBar.setToValue(1);
+
+                // Ejecutamos la transicion
+                fadeTransitionVisibility.play();
+                fadeTransitionOpenFile.play();
+                fadeTransitionPlayVideo.play();
+                fadeTransitionStopVideo.play();
+                fadeTransitionSlowVideo.play();
+                fadeTransitionBackVideo5.play();
+                fadeTransitionNormalVideo.play();
+                fadeTransitionForwardVideo5.play();
+                fadeTransitionFastVideo.play();
+                fadeTransitionVolumeSlider.play();
+                fadeTransitionProgressBar.play();
+                fadeTransitionMenuBar.play();
+
+                /**
+                 * al completarse la última transición cambiamos el
+                 * valor de la booleana visible para que al volver
+                 * a hacer clic se lleve a cabo el efecto contrario
+                 */
+                fadeTransitionMenuBar.setOnFinished(e -> {
+                    visible = true;
+                });
+            }
+        } catch (Exception e) {
+        }
 
     }
 
@@ -548,6 +574,7 @@ public class MediaPlayerController implements Initializable {
             } catch (IOException e) {
             }
         }
+        
         if (ke.getCode().equals(KeyCode.H) && ke.isControlDown()) {
             try {
                 FadeTransition fadeTransitionVisibility = new FadeTransition(Duration.millis(200), setVisibilityButtons);
@@ -562,7 +589,7 @@ public class MediaPlayerController implements Initializable {
                 FadeTransition fadeTransitionVolumeSlider = new FadeTransition(Duration.millis(200), volumeSlider);
                 FadeTransition fadeTransitionProgressBar = new FadeTransition(Duration.millis(200), progressBar);
                 FadeTransition fadeTransitionMenuBar = new FadeTransition(Duration.millis(200), menuBar);
-                
+
                 if (visible) {
                     fadeTransitionVisibility.setToValue(0.2);
                     fadeTransitionOpenFile.setToValue(0);
@@ -576,7 +603,7 @@ public class MediaPlayerController implements Initializable {
                     fadeTransitionVolumeSlider.setToValue(0);
                     fadeTransitionProgressBar.setToValue(0);
                     fadeTransitionMenuBar.setToValue(0);
-                    
+
                     fadeTransitionVisibility.play();
                     fadeTransitionOpenFile.play();
                     fadeTransitionPlayVideo.play();
@@ -589,7 +616,7 @@ public class MediaPlayerController implements Initializable {
                     fadeTransitionVolumeSlider.play();
                     fadeTransitionProgressBar.play();
                     fadeTransitionMenuBar.play();
-                    
+
                     fadeTransitionMenuBar.setOnFinished(e -> {
                         visible = false;
                     });
@@ -607,7 +634,7 @@ public class MediaPlayerController implements Initializable {
                     fadeTransitionVolumeSlider.setToValue(1);
                     fadeTransitionProgressBar.setToValue(1);
                     fadeTransitionMenuBar.setToValue(1);
-                    
+
                     fadeTransitionVisibility.play();
                     fadeTransitionOpenFile.play();
                     fadeTransitionPlayVideo.play();
@@ -620,7 +647,7 @@ public class MediaPlayerController implements Initializable {
                     fadeTransitionVolumeSlider.play();
                     fadeTransitionProgressBar.play();
                     fadeTransitionMenuBar.play();
-                    
+
                     fadeTransitionMenuBar.setOnFinished(e -> {
                         visible = true;
                     });

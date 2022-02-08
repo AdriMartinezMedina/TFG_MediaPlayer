@@ -22,7 +22,7 @@
       </Text>
    </top>
    <bottom>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(c) Copyright amartinez Junio, 2022. Todos los derechos reservados" textAlignment="CENTER" BorderPane.alignment="CENTER">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(c) Copyright amartinez Junio, 2022. Todos los derechos reservados" wrappingWidth="568.724609375" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="10.0" />
          </BorderPane.margin>
