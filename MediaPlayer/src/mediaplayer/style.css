@@ -57,3 +57,10 @@
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
 }
+
+#setVisibilityButtons {
+    -fx-background-image: url("../images/eye.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}

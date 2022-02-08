@@ -35,7 +35,7 @@ public class MediaPlayer extends Application {
         // A la escena le añadimos los valores descriptivos que queremos
         stage.setTitle("Media Player hecho por Adrian");
         stage.setFullScreenExitHint("Presione ESC or Doble Click para salir de la pantalla completa");
-        
+
         stage.getIcons().add(new Image("images/icon.png"));
 
         /**

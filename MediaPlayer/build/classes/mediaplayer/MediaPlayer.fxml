@@ -72,11 +72,16 @@
                                         <Insets bottom="10.0" />
                                     </HBox.margin>
                                 </Slider>
+                        <Button fx:id="setVisibilityButtons" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#hideShowControls" prefWidth="35.0">
+                           <HBox.margin>
+                              <Insets bottom="7.0" left="21.0" />
+                           </HBox.margin>
+                        </Button>
                             </children>
                         </HBox>
                     </children>
                 </VBox>
-                <MenuBar prefHeight="0.0" prefWidth="600.0" StackPane.alignment="TOP_CENTER">
+                <MenuBar fx:id="menuBar" prefHeight="0.0" prefWidth="600.0" StackPane.alignment="TOP_CENTER">
                     <menus>
                         <Menu mnemonicParsing="false" text="Ayuda">
                             <items>
